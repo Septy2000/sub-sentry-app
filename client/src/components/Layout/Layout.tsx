@@ -2,12 +2,14 @@ import { Outlet, Link } from "react-router";
 import styles from "./Layout.module.scss";
 
 export default function Layout() {
+    const logoSrc = "/src/assets/icons/subsentry-logo-text.svg";
+
     return (
         <div className={styles.container}>
             <nav className={styles.navbar}>
-                <div className={styles.logo}>
-                    <Link to="/">SubSentry</Link>
-                </div>
+                <Link to="/">
+                    <img src={logoSrc} alt="subsentry-logo" className={styles.logo} />
+                </Link>
                 <ul className={styles.navLinks}>
                     <li>
                         <Link to="/dashboard">Dashboard</Link>
