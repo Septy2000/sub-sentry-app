@@ -1,28 +1,16 @@
-import { Outlet, Link } from "react-router";
+import { Outlet } from "react-router";
 import styles from "./Layout.module.scss";
+import Navbar from "../NavigationBar/NavigationBar";
+import Footer from "../Footer/Footer";
 
 export default function Layout() {
-    const logoSrc = "/src/assets/icons/subsentry-logo-text.svg";
-
     return (
         <div className={styles.container}>
-            <nav className={styles.navbar}>
-                <Link to="/">
-                    <img src={logoSrc} alt="subsentry-logo" className={styles.logo} />
-                </Link>
-                <ul className={styles.navLinks}>
-                    <li>
-                        <Link to="/dashboard">Dashboard</Link>
-                    </li>
-                    <li>
-                        <Link to="/login">Login</Link>
-                    </li>
-                </ul>
-            </nav>
-
+            <Navbar />
             <main className={styles.mainContent}>
                 <Outlet />
             </main>
+            <Footer />
         </div>
     );
 }

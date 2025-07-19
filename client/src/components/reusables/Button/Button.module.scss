@@ -1,0 +1,100 @@
+.button {
+    border-radius: $border-radius-md;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    border: none;
+
+    &:active:not(:disabled) {
+        transform: translateY(-1px);
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    // Size variants
+    &.sm {
+        padding: 0.75rem 1.5rem;
+        font-size: $font-size-sm;
+    }
+
+    &.md {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    &.lg {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    &.fullWidth {
+        width: 100%;
+    }
+
+    // Variant styles
+    &.primary {
+        background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+        color: $white;
+        box-shadow: 0 6px 20px rgba(250, 153, 28, 0.3);
+
+        &:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(250, 153, 28, 0.4);
+        }
+    }
+
+    &.secondary {
+        background: linear-gradient(135deg, $secondary 0%, $secondary-light 100%);
+        color: $white;
+        box-shadow: 0 6px 20px rgba(28, 118, 143, 0.3);
+
+        &:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(28, 118, 143, 0.4);
+        }
+    }
+
+    &.outline {
+        background: transparent;
+        color: $white;
+        border: 2px solid $white;
+
+        &:hover:not(:disabled) {
+            background: $white;
+            color: $tertiary;
+            transform: translateY(-3px);
+        }
+
+        // Dark variant for light backgrounds
+        &.dark {
+            color: $tertiary;
+            border-color: $tertiary;
+
+            &:hover:not(:disabled) {
+                background: $tertiary;
+                color: $white;
+            }
+        }
+    }
+
+    &.ghost {
+        background: transparent;
+        color: $tertiary;
+        border: 2px solid transparent;
+
+        &:hover:not(:disabled) {
+            background: rgba($tertiary, 0.1);
+            border-color: $tertiary;
+            transform: translateY(-2px);
+        }
+    }
+}

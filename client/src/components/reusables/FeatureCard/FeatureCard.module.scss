@@ -1,0 +1,45 @@
+.featureCard {
+    background: $white;
+    padding: 2.5rem;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, $primary, $secondary);
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .featureIcon {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $tertiary;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        color: $gray-dark;
+        line-height: 1.6;
+        margin: 0;
+    }
+}

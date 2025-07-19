@@ -1,0 +1,106 @@
+.navbar {
+    background: linear-gradient(135deg, $tertiary 0%, $tertiary-light 100%);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+
+    &.scrolled {
+        background: rgba(3, 37, 57, 0.95);
+        box-shadow: $box-shadow-md;
+    }
+}
+
+.navContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: $font-size-xl;
+    font-weight: bold;
+    color: $primary;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .logoIcon {
+        font-size: 1.5em;
+    }
+}
+
+.nav {
+    .navLinks {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $primary-light;
+            }
+        }
+    }
+}
+
+.ctaButton {
+    box-shadow: 0 4px 15px rgba(250, 153, 28, 0.3);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(250, 153, 28, 0.4);
+    }
+}
+
+.mobileMenuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: $white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+// Mobile Styles
+@media (max-width: $breakpoint-tablet) {
+    .nav .navLinks {
+        display: none;
+    }
+
+    .mobileMenuToggle {
+        display: block;
+    }
+
+    .mobileMenuOpen .navLinks {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: $tertiary;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+        box-shadow: $box-shadow-md;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .navContainer {
+        padding: 0 1rem;
+    }
+}

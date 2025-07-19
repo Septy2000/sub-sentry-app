@@ -1,0 +1,16 @@
+.stat {
+    text-align: center;
+
+    .statNumber {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $primary-light;
+        display: block;
+    }
+
+    .statLabel {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        color: inherit;
+    }
+}
