@@ -8,24 +8,12 @@ import styles from "./HomePage.module.scss";
 
 export default function HomePage() {
     const stats: Stat[] = [
-        { number: "$2.3B", label: "Saved by users" },
-        { number: "50K+", label: "Active users" },
-        { number: "99.9%", label: "Uptime" },
+        { number: "100%", label: "Free to use" },
+        { number: "Simple", label: "Setup process" },
+        { number: "Secure", label: "Data handling" },
     ];
 
     const features: Feature[] = [
-        {
-            icon: "📊",
-            title: "Smart Tracking",
-            description:
-                "Automatically detect and categorize your subscriptions across all connected accounts and cards.",
-        },
-        {
-            icon: "🔔",
-            title: "Renewal Alerts",
-            description:
-                "Get notified before renewals so you can cancel unwanted subscriptions or negotiate better rates.",
-        },
         {
             icon: "💰",
             title: "Spending Insights",
@@ -33,43 +21,37 @@ export default function HomePage() {
                 "Visualize your subscription spending with detailed analytics and identify cost-saving opportunities.",
         },
         {
-            icon: "🔒",
-            title: "Bank-Level Security",
+            icon: "📋",
+            title: "Centralized Dashboard",
             description:
-                "Your financial data is protected with 256-bit encryption and read-only access to your accounts.",
+                "View all your subscriptions in one organized dashboard with easy-to-understand overviews and management tools.",
         },
         {
-            icon: "📱",
-            title: "Mobile App",
+            icon: "📊",
+            title: "Time-Based Tracking",
             description:
-                "Manage your subscriptions on-the-go with our intuitive mobile app for iOS and Android.",
-        },
-        {
-            icon: "🎯",
-            title: "Cancel Assistant",
-            description:
-                "Get help canceling subscriptions with direct links, phone numbers, and cancellation guides.",
+                "Monitor your subscription costs over custom time periods to understand spending patterns and budget effectively.",
         },
     ];
 
     const steps: Step[] = [
         {
             number: 1,
-            title: "Connect Your Accounts",
+            title: "Sign Up",
             description:
-                "Securely link your bank accounts and credit cards to start tracking automatically.",
+                "Create your SubSentry account and get started with tracking your subscriptions in minutes.",
         },
         {
             number: 2,
-            title: "AI Detection",
+            title: "Add Your Subscriptions",
             description:
-                "Our smart algorithms identify and categorize all your subscription services instantly.",
+                "Manually add all your subscription services with their costs and billing cycles to build your personal list.",
         },
         {
             number: 3,
             title: "Monitor & Save",
             description:
-                "Get alerts, insights, and recommendations to optimize your subscription spending.",
+                "Track your spending over time and identify opportunities to cut costs and optimize your budget.",
         },
     ];
 
@@ -82,15 +64,12 @@ export default function HomePage() {
                         Take Control of Your <span className={styles.highlight}>Subscriptions</span>
                     </h1>
                     <p className={styles.fadeInUp}>
-                        Stop overpaying for forgotten subscriptions. SubSentry tracks, alerts, and
-                        helps you manage all your recurring payments in one powerful dashboard.
+                        Stop overpaying for forgotten subscriptions. SubSentry tracks and helps you
+                        manage all your recurring payments in one simple dashboard.
                     </p>
 
                     <div className={styles.heroButtons}>
-                        <Button size="lg">Start Free Trial</Button>
-                        <Button variant="outline" size="lg">
-                            Watch Demo
-                        </Button>
+                        <Button size="lg">Get Started</Button>
                     </div>
 
                     <div className={styles.heroStats}>
@@ -148,8 +127,8 @@ export default function HomePage() {
             <section className={styles.ctaSection}>
                 <div>
                     <h2>Ready to Take Control?</h2>
-                    <p>Join thousands of users who have already saved money with SubSentry.</p>
-                    <Button size="lg">Start Your Free Trial</Button>
+                    <p>Join us and start saving money with SubSentry.</p>
+                    <Button size="lg">Get Started</Button>
                 </div>
             </section>
         </div>

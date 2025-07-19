@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Button from "../reusables/Button/Button";
+import logoImage from "@assets/icons/subsentry-logo.svg";
 import styles from "./NavigationBar.module.scss";
 
 interface NavbarProps {
@@ -37,7 +38,7 @@ export default function Navbar({ className }: NavbarProps) {
         >
             <div className={styles.navContainer}>
                 <a href="#" className={styles.logo}>
-                    <span className={styles.logoIcon}>🛡️</span>
+                    <img src={logoImage} alt="SubSentry" className={styles.logoImage}></img>
                     SubSentry
                 </a>
 
@@ -54,12 +55,7 @@ export default function Navbar({ className }: NavbarProps) {
                             </a>
                         </li>
                         <li>
-                            <a href="#pricing" onClick={() => handleNavClick("pricing")}>
-                                Pricing
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" onClick={() => handleNavClick("contact")}>
+                            <a href="/contact" onClick={() => handleNavClick("contact")}>
                                 Contact
                             </a>
                         </li>
@@ -67,7 +63,7 @@ export default function Navbar({ className }: NavbarProps) {
                 </nav>
 
                 <Button size="sm" className={styles.ctaButton}>
-                    Get Started Free
+                    Create Account
                 </Button>
 
                 <button

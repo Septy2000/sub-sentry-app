@@ -10,38 +10,13 @@ export default function Footer({ className }: FooterProps) {
         {
             title: "Product",
             links: [
-                { label: "Features", href: "#" },
-                { label: "Pricing", href: "#" },
-                { label: "Security", href: "#" },
-                { label: "Mobile App", href: "#" },
-            ],
-        },
-        {
-            title: "Company",
-            links: [
-                { label: "About Us", href: "#" },
-                { label: "Careers", href: "#" },
-                { label: "Press", href: "#" },
-                { label: "Blog", href: "#" },
+                { label: "Features", href: "#features" },
+                { label: "How It Works", href: "#how-it-works" },
             ],
         },
         {
             title: "Support",
-            links: [
-                { label: "Help Center", href: "#" },
-                { label: "Contact Us", href: "#" },
-                { label: "API Docs", href: "#" },
-                { label: "Status", href: "#" },
-            ],
-        },
-        {
-            title: "Legal",
-            links: [
-                { label: "Privacy Policy", href: "#" },
-                { label: "Terms of Service", href: "#" },
-                { label: "Cookie Policy", href: "#" },
-                { label: "GDPR", href: "#" },
-            ],
+            links: [{ label: "Contact", href: "#contact" }],
         },
     ];
 
